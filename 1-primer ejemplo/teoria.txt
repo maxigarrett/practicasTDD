@@ -1,0 +1,27 @@
+1-no va a escribir codigo de produccion a no ser que hayas escrito antes un test que falle.(no adelanterse a escribir codigo sin hacer
+test primero y que fallen)
+
+2-no vas a escribir mas de los test que sena necesarios para que falle(no hace falta que escribamos test a lo loco. no hacer mas de
+los necesarios hacer uno falla implementamos el codigo para que pase ya sea en javascript u otro , y seguimos con otro test)
+
+3-tampoco vas a escribir mas codigo de produccion del que sea suficiente o necesario para hacer que pase el test.
+
+
+USAREMOS VITEST PARA HACER LOS TEST PERO CUALWUIERA ES LO MISMO
+npm install -D vitest
+ 
+tambien detecta errores de malas practicas en programacion, errores estaticos ademas es buena practicas tenerlos para escribir codigo
+npm install standard -D 
+esto agregarlo manualmente para que detecte los errores mientras vamos escibiendo
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  }
+
+
+
+
+lo que se agrega al script del package.json para que este mirando contantemente al ahcer cambios
+  "scripts": {
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
+  }
